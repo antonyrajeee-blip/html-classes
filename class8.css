@@ -1,0 +1,59 @@
+body {
+    font-family:'Arial', sans-serif;
+    background-color: crimson;
+    color: #c9d1d9
+
+}
+
+h1{
+    color: #58A6FF;
+    text-align: center;
+
+}
+
+a{
+    color:aqua;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #1f6feb;
+}
+
+ul > li{
+    font-weight:bold;
+    color: rgb(108, 247, 165);
+}
+
+h1 , p{
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+ul li:hover{
+    color:rgb(255, 140, 0)
+}
+
+ul li:nth-child(3){
+    background-color: rgb(41, 139, 19);
+}
+
+p:not(:first-of-type){
+    text-decoration: underline;
+}
+
+ul li::before{
+    content: "🤖"
+}
+
+a::after{
+    content: "🦋"
+}
+
+p::first-letter{
+    font-size: 200%;
+    color: #c3b14b;
+}
+
+
