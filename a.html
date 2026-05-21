@@ -1,0 +1,87 @@
+<!--
+1) Start the HTML document.
+   a) Use `<!DOCTYPE html>` to define the page as an HTML5 document.
+   b) Open the `<html>` tag.
+
+2) Create the head section.
+   a) Set the page title as "My Animal Fact File".
+   b) Add internal CSS using the `<style>` tag.
+
+3) Style the main page body.
+   a) Add a dark green background colour.
+   b) Set the font family to Arial.
+
+4) Style the animal fact file box.
+   a) Use `.fact-file` to target the main card.
+   b) Add a light yellow background colour.
+   c) Set the text colour.
+   d) Set the width of the card.
+   e) Add padding inside the card.
+   f) Add a solid border around the card.
+   g) Add margin outside the card.
+
+5) Style the animal name.
+   a) Use `.animal-name` to target the heading.
+   b) Add a forest green colour.
+   c) Set the font size.
+
+6) Style the animal details.
+   a) Use `.detail` to target each detail line.
+   b) Add a dark text colour.
+
+7) Style the cool fact.
+   a) Use `.cool-fact` to target the special fact.
+   b) Add an orange colour.
+   c) Make the text italic.
+
+8) Add the page content.
+   a) Create a `<div>` with the class `fact-file`.
+   b) Add the animal name using `<h2>`.
+   c) Add details for type, habitat, and diet using `<p>`.
+   d) Add a cool fact using `<p>`.
+
+9) Close the `<body>` and `<html>` tags to complete the webpage.
+-->
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         body{
+            background-color: darkgreen;
+            font-family: Arial, sans-serif;
+         }
+
+         .fact-file{
+            background-color: lightyellow;
+            
+            
+            border: 5px solid black;
+            padding: 100px;
+            margin: 100px;
+
+         }
+         .detail-a{
+            color: rgb(61, 35, 35);
+            background-color: yellow;
+            float:left;
+         }
+         .detail-b{
+            color: rgb(12, 6, 67);
+            background-color: rgb(235, 160, 31);
+            float:right;
+         }
+      </style>
+   </head>
+   <body>
+
+      <div class = "fact-file">
+         <h2 class ="animal-name">Snow leopard</h2>
+         <p class = "detail-a">type: big cat</p>
+         <p class = "detail-b">lives in: Mountain range of central asia</p>
+         <p class = "detail">Diet:Derr, goats, and wild sheep</p>
+         <p class = "Cool-fact">cool fact: can leap up to 15 meteres in one jump</p>
+      </div>
+   
+   </body>
+</html>
