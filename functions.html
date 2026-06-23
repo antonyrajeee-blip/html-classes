@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Basic functions in js</h1>
+        <button onclick="myfunction(5, 20)">Execute JS function</button>
+        <script>
+            function myfunction(x,y)
+            {
+                document.write("sum of two numbers is ", (x + y))
+            }
+        </script>
+        <hr>
+        <h1>Scope of variables and functions</h1>
+        <p>A function can access variables defined inside the function:</p>
+        <button onclick="myfunction()">Click Me!</button>
+        <p id = "demo"></p>
+        <p id = "demo1"></p>
+        <p id = "demo2"></p>
+        <script>
+            var b = 5;
+            function myfunction(){
+                var a = 4;
+               // document.getElementById("demo").innerHTML = b * a;
+               document.getElementById("demo1").innerHTML = a;
+               document.getElementById("demo2").innerHTML = b;
+            }
+            document.getElementById("demo1").innerHTML = a;
+            document.getElementById("demo2").innerHTML = b;
+        </script>
+        <hr>
+        <h1>Expression function</h1>
+        <h3>Function Decleration</h3>
+        <script>
+            var result = function (a, b) {return a * b};
+            document.write(result(5,8))
+        </script>
+    </body>
+</html>
