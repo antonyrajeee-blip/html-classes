@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palindrome cheking function</title>
+        <style>
+            body{
+                background: linear-gradient(to right, #f89b9b, #ffeb90);
+                text-align: center;
+                font-family: 'Trebuchet MS', Helvetica, sans-serif;;
+            }
+            h2{
+                font-size: 35px;
+                color: teal;
+                text-shadow: 20px 15px 20px #b17e7e;
+            }
+
+            button{
+                background: teal;
+                color: rgb(231, 231, 231);
+                font-size: 20px;
+                border-radius: 10px;
+            }
+
+            input{
+                font-size: 20px;
+                font-family:'Trebuchet MS', Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>JavaScript Palindrome checking function</h2>
+        <input type = "text" id = "myString" placeholder="Enter a string to check for palindrome">
+        <button onclick="palindrome()">Check</button>
+        <p id = "result"></p>
+        <script>
+            function palindrome(){
+                var myString = document.getElementById("myString").value;
+                // in case if any special characters or spaces that has to be removed 
+                var input = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+                //to check palindrome or not the string needs to be reversed so we are reversing it by splitting and joining it
+                var reversedInput = input.split('').reverse().join('');
+
+                //cheking for palindrome
+                if (input === reversedInput){
+                    document.getElementById("result").innerHTML = "<div>" + myString + " is a palindrome <div>";
+                }else{
+                    document.getElementById("result").innerHTML = "<div>" + myString + " is not a palindrome <div>";
+                }
+            }
+
+            //invoking function
+        </script>
+    </body>
+</html>
