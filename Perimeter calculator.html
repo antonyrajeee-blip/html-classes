@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: aliceblue;
+            }
+            h1{
+                color: rgb(9, 64, 112);
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 50px;
+            }
+            button{
+                color: rgb(9, 64, 112);
+                font-size: 25px;
+                background-color: aliceblue;
+                border-color: rgb(9, 64, 112);
+                border-radius: 10px;
+                box-shadow: 4px 8px 12px rgb(109, 189, 209);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Perimeter Calculator</h1>
+        <button onclick="area()">Click here for the Perimeter claculations</button>
+        <script>
+            function area() {
+                var choice = prompt("Welcome to Perimeter Calculator. \n pleas enter your choice. \n1.Area of Rectangle. \n2.Area of triangle. \n3.Area of Circle. \n4.Area of Parallelogram");
+    
+    
+                if (choice == '1') {
+                    var l = prompt('enter the length')
+                    var b = promt('Enter the breadth')
+                    var result = Number(l) + Number(b) * 2
+                    alert('The perimeter is ' + result)
+                }
+    
+                if (choice == '2') {
+                    var s1 = prompt('Enter a side')
+                    var s2 = prompt('Enter a side')
+                    var b = promt('Enter the base')
+                    var result = Number(s1) + Number(s2) + Number(b)
+                    alert('The perimeter is ' + result)
+                }
+    
+                if (choice == '3') {
+                    var r = prompt('Enter the radius')
+                    var result = 2 * 3.14 * Number(r)
+                    alert('The perimeter is ' + result)
+                }
+    
+                if (choice == '4') {
+                    var s1 = prompt('Enter a side')
+                    var s2 = prompt('Enter a side')
+                    var s3 = prompt('Enter a side')
+                    var s4 = prompt('Enter a side')
+                    var result = Number(s1) + Number(s2) + Number(s3) + Number(s4)
+                    alert('The perimeter is ' + result)
+                }
+            }
+        </script>
+    </body>
+</html>
