@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: rgb(240, 255, 245);
+            }
+
+            h3{
+                color: black;
+                font-size: 25px;
+            }
+            input{
+                color: rgb(0, 0, 48);
+                font-size: 20px;
+                background-color: rgb(249, 255, 251);
+                border: 2px solid rgb(0, 0, 48);
+                border-radius: 10px;
+                box-shadow: 4px 8px 12px rgb(109, 209, 161);
+            }
+            button{
+                color: rgb(0, 0, 48);
+                font-size: 20px;
+                background-color: rgb(255, 176, 167);
+                border: 2px solid rgb(255, 66, 45);
+                border-radius: 10px;
+                box-shadow: 4px 8px 12px rgb(247, 156, 146);
+            }
+            ul{
+                font-size: 20px;
+                color: rgb(29, 8, 0);
+                box-shadow: 2px 4px 6px rgb(109, 209, 161);
+                background-color: rgb(255, 255, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Add your to do list here</h3>
+        <form id = "myform">
+            <input id = "myInput" type="text">
+            <button>Add</button>
+        </form>
+        <h3>To do list</h3>
+        <ul id = "myItem"></ul><br><br>
+        <script>
+            var myform = document.getElementById("myform");
+            var myInput = document.getElementById("myInput");
+            var myItem = document.getElementById("myItem");
+            myform.addEventListener("submit", function(event){
+                event.preventDefault();
+                createItem(myInput.value);
+            })
+
+            function createItem(inputItems){
+                var items = `<li>${inputItems}
+                <button onclick="deleteElement(this)">Delete</button> </li>`
+                myItem.insertAdjacentHTML("beforeend", items)
+                myInput.value = ""
+                myInput.focus()
+            }
+
+            function deleteElement(ElementToDelete){
+                ElementToDelete.parentElement.remove()
+            }
+        </script>
+    </body>
+</html>
