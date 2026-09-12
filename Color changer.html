@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Changer</title>
+        <style>
+            body{
+                text-align: center;
+                margin-top: 100px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: black;
+            }
+
+            button{
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #80ae82;
+                color: rgb(0, 0, 0);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button id="colorButton" onclick="changecolor()">Change Color</button>
+        </div>
+        <script>
+            function changecolor() {
+                const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                document.body.style.backgroundColor = randomColor;
+            }
+        </script>
+    </body>
+</html>
