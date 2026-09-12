@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                margin-top: 100px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: black;
+            }
+
+            button{
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #80ae82;
+                color: rgb(0, 0, 0);
+            }
+
+            p{
+                font-size: 24px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <p id = "count"></p>
+        <button onclick="increase()">Increase</button>
+        <button onclick="decrease()">Decrease</button>
+        <button onclick="reset()">refresh</button>
+        <script>
+            var count = 0;
+            document.getElementById("count").innerHTML = count;
+            function increase() {
+                count += 1;
+                document.getElementById("count").innerHTML = count;
+            }
+
+            function decrease(){
+                count -= 1;
+                document.getElementById("count").innerHTML = count;
+            }
+
+            function reset(){
+                count = 0;
+                document.getElementById("count").innerHTML = count;
+            }
+        </script>
+    </body>
+</html>
